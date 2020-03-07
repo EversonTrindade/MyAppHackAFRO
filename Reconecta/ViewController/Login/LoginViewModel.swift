@@ -13,7 +13,7 @@ protocol LoginViewToModelProtocol: class {
 }
 
 protocol LoginModelToViewProtocol: class {
-    
+    func loginSuccess(_ did: Bool)
 }
 
 class LoginViewModel: LoginViewToModelProtocol {

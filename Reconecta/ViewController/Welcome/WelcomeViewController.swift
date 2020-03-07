@@ -24,6 +24,20 @@ extension WelcomeViewController {
         guard let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) as? LoginViewController else {
             return
         }
-        navigationController?.pushViewController(loginViewController, animated: true)
+        loginViewController.initView(self)
+        navigationController?.present(loginViewController, animated: true, completion: nil)
+    }
+    
+    func gotToHome() {
+        guard let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController else {
+            return
+        }
+        navigationController?.pushViewController(homeViewController, animated: true)
+    }
+}
+
+extension WelcomeViewController: LoginViewControllerDelegate {
+    func didLogin() {
+        gotToHome()
     }
 }

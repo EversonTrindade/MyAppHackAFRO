@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wia-6K-Jlw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="7zR-Ls-QX9">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="wia-6K-Jlw" customClass="LoginViewController" customModule="Reconecta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2O4-6M-11M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-sg-8UQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Login" id="7FM-Lg-9lK"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-ae-DFJ">
+                                <rect key="frame" x="184" y="183" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToHome:" destination="wia-6K-Jlw" eventType="touchUpInside" id="v0T-Cx-4yt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="v1c-sg-8UQ" secondAttribute="trailing" id="e5h-Nb-qax"/>
+                            <constraint firstItem="v1c-sg-8UQ" firstAttribute="leading" secondItem="2O4-6M-11M" secondAttribute="leading" id="f9J-xQ-lsi"/>
+                            <constraint firstItem="v1c-sg-8UQ" firstAttribute="top" secondItem="D7y-vX-NGU" secondAttribute="top" id="y8f-MT-9Aq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D7y-vX-NGU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="eaN-Ua-3bf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cm7-GH-9gu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
