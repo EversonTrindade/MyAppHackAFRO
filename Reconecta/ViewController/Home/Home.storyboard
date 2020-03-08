@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1475" y="80"/>
         </scene>
-        <!--Home-->
+        <!--Cursos-->
         <scene sceneID="Xbi-Ug-9cb">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="hWt-Lo-9X9" customClass="HomeViewController" customModule="Reconecta" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Hj-WT-KI3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="BcY-c8-tu7">
+                    <navigationItem key="navigationItem" title="Cursos" id="BcY-c8-tu7">
                         <barButtonItem key="backBarButtonItem" title=" " id="LcA-91-4PV"/>
                         <barButtonItem key="leftBarButtonItem" title="Sair" id="aHt-Xv-WGz">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

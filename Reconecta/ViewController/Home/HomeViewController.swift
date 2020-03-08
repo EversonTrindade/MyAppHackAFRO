@@ -78,6 +78,13 @@ extension HomeViewController {
         alert.addAction(cancelOpt)
         present(alert, animated: true, completion: nil)
     }
+    
+    func goToDetail(index: Int) {
+        guard let courseDetailViewController = UIStoryboard(name: "CourseDetail", bundle: nil).instantiateViewController(withIdentifier: String(describing: CourseDetailViewController.self)) as? CourseDetailViewController else {
+            return
+        }
+        present(courseDetailViewController, animated: true, completion: nil)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -91,6 +98,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.initCell(course: viewModel.getCourse(by: indexPath.row))
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        goToDetail(index: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

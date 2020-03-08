@@ -11,4 +11,5 @@ import Foundation
 struct Course: Mappable {
     var name: String?
     var numberStudent: Int?
+    var active: Bool?
 }

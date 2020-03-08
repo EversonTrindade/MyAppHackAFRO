@@ -15,8 +15,17 @@ class HomeCell: UITableViewCell {
     }
     
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var numberLbl: UILabel!
+    @IBOutlet weak var closedCourseLbl: UILabel!
     
     func initCell(course: Course?) {
         titleLbl.text = course?.name ?? ""
+        numberLbl.text = "\(course?.numberStudent ?? 0)"
+        if course?.active ?? false == false {
+            contentView.backgroundColor = .darkGray
+            closedCourseLbl.text = "Curso fechado"
+        } else {
+            closedCourseLbl.text = "Nome"
+        }
     }
 }
