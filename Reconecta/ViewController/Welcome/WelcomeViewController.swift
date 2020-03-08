@@ -18,8 +18,12 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func buttonAction(_ sender: Any) {
-        goToLogin()
+    @IBAction func aluminiButtonAction(_ sender: Any) {
+        goToLogin(userKind: .alumini)
+    }
+    
+    @IBAction func ongButtonAction(_ sender: Any) {
+        goToLogin(userKind: .ong)
     }
     
     // MARK: Prepare for segue
@@ -37,11 +41,11 @@ class WelcomeViewController: UIViewController {
 }
 
 extension WelcomeViewController {
-    func goToLogin() {
+    func goToLogin(userKind: UserKind?) {
         guard let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) as? LoginViewController else {
             return
         }
-        loginViewController.initView(self)
+        loginViewController.initView(self, userKind: userKind)
         present(loginViewController, animated: true, completion: nil)
         
     }

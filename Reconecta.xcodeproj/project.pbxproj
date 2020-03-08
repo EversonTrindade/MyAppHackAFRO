@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AF74ECE2C70C7C97CFDF844 /* Pods_Reconecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2D195B051601F846A55561 /* Pods_Reconecta.framework */; };
 		D7215AFD24146C730098BEEE /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7215AFC24146C730098BEEE /* Search.storyboard */; };
 		D7215AFF24146C820098BEEE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7215AFE24146C820098BEEE /* SearchViewController.swift */; };
 		D77C53312414845A00417607 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77C53302414845A00417607 /* Profile.storyboard */; };
 		D77C53342414857300417607 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C53332414857300417607 /* Extensions.swift */; };
 		D77C5336241486FF00417607 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C5335241486FF00417607 /* ProfileViewController.swift */; };
+		D77C533924149CF100417607 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533824149CF100417607 /* CourseViewController.swift */; };
+		D77C533B24149D0200417607 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77C533A24149D0200417607 /* Course.storyboard */; };
 		D798440824144482006A3BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440724144482006A3BCD /* AppDelegate.swift */; };
 		D798440A24144482006A3BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440924144482006A3BCD /* SceneDelegate.swift */; };
 		D798441124144484006A3BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D798441024144484006A3BCD /* Assets.xcassets */; };
@@ -29,11 +32,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E2D195B051601F846A55561 /* Pods_Reconecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reconecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206A9F67AB72DD20B67A4900 /* Pods-Reconecta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reconecta.debug.xcconfig"; path = "Target Support Files/Pods-Reconecta/Pods-Reconecta.debug.xcconfig"; sourceTree = "<group>"; };
+		8CD23F2EE3E84590007BAC4E /* Pods-Reconecta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reconecta.release.xcconfig"; path = "Target Support Files/Pods-Reconecta/Pods-Reconecta.release.xcconfig"; sourceTree = "<group>"; };
 		D7215AFC24146C730098BEEE /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		D7215AFE24146C820098BEEE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D77C53302414845A00417607 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D77C53332414857300417607 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D77C5335241486FF00417607 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D77C533824149CF100417607 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		D77C533A24149D0200417607 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		D798440424144482006A3BCD /* Reconecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reconecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798440724144482006A3BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D798440924144482006A3BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,12 +65,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF74ECE2C70C7C97CFDF844 /* Pods_Reconecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09CD7B2C4E60E48C08FD61EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E2D195B051601F846A55561 /* Pods_Reconecta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45F7707713DF105076CBA80C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				206A9F67AB72DD20B67A4900 /* Pods-Reconecta.debug.xcconfig */,
+				8CD23F2EE3E84590007BAC4E /* Pods-Reconecta.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D7215AFA24146C430098BEEE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +115,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D77C533724149CC000417607 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				D77C533824149CF100417607 /* CourseViewController.swift */,
+				D77C533A24149D0200417607 /* Course.storyboard */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
 		D79843FB24144482006A3BCD = {
 			isa = PBXGroup;
 			children = (
 				D798440624144482006A3BCD /* Reconecta */,
 				D798440524144482006A3BCD /* Products */,
+				45F7707713DF105076CBA80C /* Pods */,
+				09CD7B2C4E60E48C08FD61EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,11 +188,12 @@
 		D7FAE83E24145BCF00C8E4AB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D7215AFB24146C470098BEEE /* Search */,
-				D7215AFA24146C430098BEEE /* Profile */,
 				D798441B241444FB006A3BCD /* Welcome */,
 				D798441C24144543006A3BCD /* Login */,
 				D798442724144CBC006A3BCD /* Home */,
+				D7215AFB24146C470098BEEE /* Search */,
+				D7215AFA24146C430098BEEE /* Profile */,
+				D77C533724149CC000417607 /* Course */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D798441824144484006A3BCD /* Build configuration list for PBXNativeTarget "Reconecta" */;
 			buildPhases = (
+				3D21DC8CABB01F78452F848D /* [CP] Check Pods Manifest.lock */,
 				D798440024144482006A3BCD /* Sources */,
 				D798440124144482006A3BCD /* Frameworks */,
 				D798440224144482006A3BCD /* Resources */,
+				D902A22EC11EBCC72D54EBA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D798442624144918006A3BCD /* Login.storyboard in Resources */,
+				D77C533B24149D0200417607 /* Course.storyboard in Resources */,
 				D798442924144CD8006A3BCD /* Home.storyboard in Resources */,
 				D798441424144484006A3BCD /* LaunchScreen.storyboard in Resources */,
 				D798441124144484006A3BCD /* Assets.xcassets in Resources */,
@@ -264,11 +305,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D21DC8CABB01F78452F848D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reconecta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D902A22EC11EBCC72D54EBA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reconecta/Pods-Reconecta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reconecta/Pods-Reconecta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reconecta/Pods-Reconecta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D798440024144482006A3BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77C533924149CF100417607 /* CourseViewController.swift in Sources */,
 				D7215AFF24146C820098BEEE /* SearchViewController.swift in Sources */,
 				D798442B24144CE7006A3BCD /* HomeViewController.swift in Sources */,
 				D7FAE84824145D3100C8E4AB /* ValidateManager.swift in Sources */,
@@ -414,10 +498,12 @@
 		};
 		D798441924144484006A3BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206A9F67AB72DD20B67A4900 /* Pods-Reconecta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Reconecta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,10 +517,12 @@
 		};
 		D798441A24144484006A3BCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD23F2EE3E84590007BAC4E /* Pods-Reconecta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Reconecta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

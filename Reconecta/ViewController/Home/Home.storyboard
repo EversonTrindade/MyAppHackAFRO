@@ -42,6 +42,11 @@
                                 <action selector="logOutAction:" destination="hWt-Lo-9X9" id="Yod-8o-Wpg"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XaK-DG-Zw0">
+                            <connections>
+                                <action selector="addCourseAction:" destination="hWt-Lo-9X9" id="ref-bf-1x3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS9-Ol-Ktu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

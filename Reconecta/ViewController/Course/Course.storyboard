@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Course View Controller-->
+        <scene sceneID="DaA-Ql-8MB">
+            <objects>
+                <viewController storyboardIdentifier="CourseViewController" id="cWU-6a-yEl" customClass="CourseViewController" customModule="Reconecta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Os-Vp-ZvH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAb-tg-3zK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="w9M-JN-Xir"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Cadastrar" id="r6v-W0-fzK">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ABG-Ka-Pev">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="cWU-6a-yEl" id="J9S-AK-Uqg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tAb-tg-3zK" firstAttribute="leading" secondItem="9Os-Vp-ZvH" secondAttribute="leading" symbolic="YES" id="4cM-zu-Eqp"/>
+                            <constraint firstItem="TVD-IJ-hDH" firstAttribute="trailing" secondItem="tAb-tg-3zK" secondAttribute="trailing" id="GLu-Db-xKm"/>
+                            <constraint firstItem="tAb-tg-3zK" firstAttribute="top" secondItem="TVD-IJ-hDH" secondAttribute="top" id="dhl-FL-lfD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TVD-IJ-hDH"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationTitle" destination="tAb-tg-3zK" id="HVy-bu-wlq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWW-De-Uko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="88"/>
+        </scene>
+    </scenes>
+</document>

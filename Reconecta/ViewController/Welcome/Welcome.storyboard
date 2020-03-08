@@ -15,26 +15,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmS-ug-DgX">
-                                <rect key="frame" x="125" y="180" width="165" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="U8f-Ly-hb9"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSm-77-tp2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Welcome" id="vig-Jm-Feu"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFz-fb-LPm">
+                                <rect key="frame" x="112" y="170" width="191" height="85"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="gdN-Z1-Snu"/>
+                                    <constraint firstAttribute="width" constant="191" id="xSj-9b-2BB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SOU ONG"/>
+                                <connections>
+                                    <action selector="ongButtonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="aEx-gu-Nby"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sm-EE-Vcq">
+                                <rect key="frame" x="112" y="297" width="191" height="85"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="73t-2b-FLE"/>
+                                    <constraint firstAttribute="height" constant="85" id="mZ8-6O-yps"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SOU ALUNO"/>
+                                <connections>
+                                    <action selector="aluminiButtonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="dl8-A5-iXk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="IFz-fb-LPm" firstAttribute="leading" secondItem="hnI-sL-9UJ" secondAttribute="leading" constant="112" id="AXI-gp-z2j"/>
                             <constraint firstItem="rSm-77-tp2" firstAttribute="leading" secondItem="5UF-P7-ZcO" secondAttribute="leading" id="BqS-9i-xB9"/>
+                            <constraint firstItem="hnI-sL-9UJ" firstAttribute="trailing" secondItem="2Sm-EE-Vcq" secondAttribute="trailing" constant="111" id="Js6-eg-sX5"/>
+                            <constraint firstItem="2Sm-EE-Vcq" firstAttribute="top" secondItem="IFz-fb-LPm" secondAttribute="bottom" constant="42" id="MrA-7c-xaP"/>
+                            <constraint firstItem="hnI-sL-9UJ" firstAttribute="trailing" secondItem="IFz-fb-LPm" secondAttribute="trailing" constant="111" id="VdU-7t-J82"/>
                             <constraint firstItem="hnI-sL-9UJ" firstAttribute="trailing" secondItem="rSm-77-tp2" secondAttribute="trailing" id="c5H-xf-H1f"/>
                             <constraint firstItem="rSm-77-tp2" firstAttribute="top" secondItem="hnI-sL-9UJ" secondAttribute="top" id="doi-VI-XCy"/>
+                            <constraint firstItem="IFz-fb-LPm" firstAttribute="top" secondItem="rSm-77-tp2" secondAttribute="bottom" constant="82" id="m2R-iN-zFT"/>
+                            <constraint firstItem="2Sm-EE-Vcq" firstAttribute="leading" secondItem="hnI-sL-9UJ" secondAttribute="leading" constant="112" id="yfG-aI-pcp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hnI-sL-9UJ"/>
                     </view>
@@ -45,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWR-O9-PCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1397" y="-25"/>
+            <point key="canvasLocation" x="-1397.1014492753625" y="-25.446428571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2hF-7I-VVj">

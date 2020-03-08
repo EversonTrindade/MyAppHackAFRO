@@ -25,6 +25,6 @@ class LoginViewModel: LoginViewToModelProtocol {
     }
     
     func shouldLogin(email: String, password: String) {
-        
+        delegate?.loginSuccess(true)
     }
 }
