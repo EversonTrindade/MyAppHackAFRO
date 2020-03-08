@@ -20,6 +20,18 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var ongButton: UIButton! {
+        didSet {
+            self.ongButton.layer.cornerRadius = 26.0
+            self.ongButton.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var aluminiButton: UIButton! {
+        didSet {
+            self.aluminiButton.layer.cornerRadius = 26.0
+            self.aluminiButton.clipsToBounds = true
+        }
+    }
     @IBAction func aluminiButtonAction(_ sender: Any) {
         goToLogin(userKind: .alumini)
         userKind = .alumini

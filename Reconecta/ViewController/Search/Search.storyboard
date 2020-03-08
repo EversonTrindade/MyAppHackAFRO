@@ -32,7 +32,28 @@
                     <view key="view" contentMode="scaleToFill" id="lNR-r7-GyX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-sJ-H60">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="bRF-Vd-gSt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <connections>
+                                    <outlet property="dataSource" destination="qIf-S8-zQL" id="Mtg-8j-81i"/>
+                                    <outlet property="delegate" destination="qIf-S8-zQL" id="OtF-it-ME9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2cf-GJ-W6n" firstAttribute="trailing" secondItem="bq0-sJ-H60" secondAttribute="trailing" id="GAO-tx-nVK"/>
+                            <constraint firstItem="bq0-sJ-H60" firstAttribute="leading" secondItem="2cf-GJ-W6n" secondAttribute="leading" id="XRI-3v-871"/>
+                            <constraint firstItem="2cf-GJ-W6n" firstAttribute="bottom" secondItem="bq0-sJ-H60" secondAttribute="bottom" id="ceh-XG-FiF"/>
+                            <constraint firstItem="bq0-sJ-H60" firstAttribute="top" secondItem="2cf-GJ-W6n" secondAttribute="top" id="zJX-KO-ejm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2cf-GJ-W6n"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="BjP-bq-Eme"/>
