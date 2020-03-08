@@ -13,4 +13,10 @@ class HomeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    
+    func initCell(course: Course?) {
+        titleLbl.text = course?.name ?? ""
+    }
 }

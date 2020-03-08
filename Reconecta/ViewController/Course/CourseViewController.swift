@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol CourseViewControllerDelegate: class {
+    func reloadView()
+}
+
 class CourseViewController: UIViewController {
 
     var userKind: UserKind?
     lazy var viewModel: CourseViewToModelProtocol = CourseViewModel(self)
+    private weak var delegate: CourseViewControllerDelegate?
     
     @IBOutlet weak var navigationTitle: UINavigationBar!
     @IBOutlet weak var numberOfStudents: UITextField!
@@ -22,8 +27,9 @@ class CourseViewController: UIViewController {
         configView()
     }
     
-    func initView(kind: UserKind?) {
+    func initView(kind: UserKind?, delegate: CourseViewControllerDelegate?) {
         self.userKind = kind
+        self.delegate = delegate
     }
     
     func configView() {
@@ -65,8 +71,10 @@ class CourseViewController: UIViewController {
 extension CourseViewController: CourseModelToViewProtocol {
     func savedNewCourse(_ did: Bool) {
         if did {
-            showDefaultAlert(message: "Curso salvo com sucesso :)") { _ in
-                self.dismiss(animated: true, completion: nil)
+            showDefaultAlert(message: "Curso salvo com sucesso ;)") { _ in
+                self.dismiss(animated: true) {
+                    self.delegate?.reloadView()
+                }
             }
             return
         }

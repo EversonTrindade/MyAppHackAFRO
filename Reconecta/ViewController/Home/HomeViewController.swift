@@ -60,7 +60,7 @@ extension HomeViewController {
         guard let courseViewController = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: String(describing: CourseViewController.self)) as? CourseViewController else {
             return
         }
-        courseViewController.initView(kind: option)
+        courseViewController.initView(kind: option, delegate: self)
         present(courseViewController, animated: true, completion: nil)
     }
     
@@ -82,13 +82,14 @@ extension HomeViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return viewModel.getCoursesCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeCell.self), for: indexPath) as? HomeCell else {
             return UITableViewCell()
         }
+        cell.initCell(course: viewModel.getCourse(by: indexPath.row))
         return cell
     }
 }
@@ -106,5 +107,12 @@ extension HomeViewController: HomeModelToViewProtocol {
         showDefaultAlert(message: "Erro ao buscar cursos. :/") { _ in
             self.dismiss(animated: true, completion: nil)
         }
+    }
+}
+
+extension HomeViewController: CourseViewControllerDelegate {
+    func reloadView() {
+        showLoader()
+        viewModel.shouldGetCourses()
     }
 }
