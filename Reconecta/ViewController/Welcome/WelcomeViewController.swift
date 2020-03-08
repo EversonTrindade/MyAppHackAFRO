@@ -8,14 +8,31 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+fileprivate struct identifier {
+    static let segue = "segueToHome"
+}
 
+class WelcomeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func buttonAction(_ sender: Any) {
         goToLogin()
+    }
+    
+    // MARK: Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == identifier.segue {
+            if let tabBarController = segue.destination as? UITabBarController {
+                if let navigationController = tabBarController.viewControllers?.object(index: 0) as? UINavigationController {
+                    if let homeViewController = navigationController.viewControllers.object(index: 0) as? HomeViewController {
+                        homeViewController.initView()
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -25,19 +42,17 @@ extension WelcomeViewController {
             return
         }
         loginViewController.initView(self)
-        navigationController?.present(loginViewController, animated: true, completion: nil)
+        present(loginViewController, animated: true, completion: nil)
+        
     }
     
-    func gotToHome() {
-        guard let homeViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController else {
-            return
-        }
-        navigationController?.pushViewController(homeViewController, animated: true)
+    func gotToTabBar() {
+        performSegue(withIdentifier: identifier.segue, sender: nil)
     }
 }
 
 extension WelcomeViewController: LoginViewControllerDelegate {
     func didLogin() {
-        gotToHome()
+        gotToTabBar()
     }
 }

@@ -11,6 +11,8 @@
         <scene sceneID="jN0-PM-rzQ">
             <objects>
                 <navigationController id="gB5-t7-Xh5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="X9R-aX-zfD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rly-gk-D8I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,7 +35,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5Hj-WT-KI3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="BcY-c8-tu7"/>
+                    <navigationItem key="navigationItem" title="Home" id="BcY-c8-tu7">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LcA-91-4PV"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="aHt-Xv-WGz">
+                            <connections>
+                                <action selector="logOutAction:" destination="hWt-Lo-9X9" id="Yod-8o-Wpg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS9-Ol-Ktu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
