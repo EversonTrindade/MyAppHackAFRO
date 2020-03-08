@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ea9-ks-8x9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Company View Controller-->
+        <scene sceneID="11O-uj-9Y7">
+            <objects>
+                <viewController storyboardIdentifier="CompanyViewController" id="ea9-ks-8x9" customClass="CompanyViewController" customModule="Reconecta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APg-AZ-7q2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIz-in-3TL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="k5c-XI-gNn"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Cadastro de OSC" id="f0Y-Hu-adL"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CNPJ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ks-xi-4dL">
+                                <rect key="frame" x="41" y="144" width="333" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="bNN-4M-1x9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfZ-wx-DZ6">
+                                <rect key="frame" x="136" y="243" width="142" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="SNh-ly-Gix"/>
+                                </constraints>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="saveCompanyAction:" destination="ea9-ks-8x9" eventType="touchUpInside" id="sqO-QW-rVY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BfZ-wx-DZ6" firstAttribute="top" secondItem="3ks-xi-4dL" secondAttribute="bottom" constant="65" id="Ddx-f2-pk4"/>
+                            <constraint firstItem="5wx-cD-b17" firstAttribute="trailing" secondItem="BfZ-wx-DZ6" secondAttribute="trailing" constant="136" id="Egd-iH-XVL"/>
+                            <constraint firstItem="BfZ-wx-DZ6" firstAttribute="leading" secondItem="5wx-cD-b17" secondAttribute="leading" constant="136" id="IaA-xB-Lz5"/>
+                            <constraint firstItem="tIz-in-3TL" firstAttribute="leading" secondItem="5wx-cD-b17" secondAttribute="leading" id="R8d-Kw-1Ja"/>
+                            <constraint firstItem="3ks-xi-4dL" firstAttribute="top" secondItem="tIz-in-3TL" secondAttribute="bottom" constant="56" id="TVQ-Aw-pmQ"/>
+                            <constraint firstItem="tIz-in-3TL" firstAttribute="top" secondItem="5wx-cD-b17" secondAttribute="top" id="f2m-7H-JYY"/>
+                            <constraint firstItem="5wx-cD-b17" firstAttribute="trailing" secondItem="3ks-xi-4dL" secondAttribute="trailing" constant="40" id="kXI-RH-xVz"/>
+                            <constraint firstItem="3ks-xi-4dL" firstAttribute="leading" secondItem="5wx-cD-b17" secondAttribute="leading" constant="41" id="mA4-Oq-Mix"/>
+                            <constraint firstItem="tIz-in-3TL" firstAttribute="trailing" secondItem="5wx-cD-b17" secondAttribute="trailing" id="ywo-Kc-FEo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wx-cD-b17"/>
+                    </view>
+                    <connections>
+                        <outlet property="cnpjTextField" destination="3ks-xi-4dL" id="ZNg-h3-bYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t78-8j-8K0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="-7"/>
+        </scene>
+    </scenes>
+</document>

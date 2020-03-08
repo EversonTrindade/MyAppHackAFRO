@@ -19,5 +19,8 @@ struct BaseAPI {
     var course: String {
         return base + "/api/v1/course"
     }
-
+    
+    var company: String {
+        return base + "/api/v1/company"
+    }
 }

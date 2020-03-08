@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="85" id="gdN-Z1-Snu"/>
                                     <constraint firstAttribute="width" constant="191" id="xSj-9b-2BB"/>
                                 </constraints>
-                                <state key="normal" title="SOU ONG"/>
+                                <state key="normal" title="SOU OSC"/>
                                 <connections>
                                     <action selector="ongButtonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="aEx-gu-Nby"/>
                                 </connections>

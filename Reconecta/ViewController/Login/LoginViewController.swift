@@ -25,10 +25,18 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if userKind == UserKind.ong {
+            companyButton.isHidden = false
+        }
     }
     
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var companyButton: UIButton! {
+        didSet {
+            self.companyButton.isHidden = true
+        }
+    }
     
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -37,6 +45,14 @@ class LoginViewController: UIViewController {
     @IBAction func goToHome(_ sender: Any) {
         showLoader()
         viewModel.shouldLogin(email: userTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
+    
+    @IBAction func registerNewCompanyAction(_ sender: Any) {
+        guard let companyViewController = UIStoryboard(name: "Company", bundle: nil).instantiateViewController(withIdentifier: String(describing: CompanyViewController.self)) as? CompanyViewController else {
+            return
+        }
+        companyViewController.initView(delegate: self)
+        present(companyViewController, animated: true, completion: nil)
     }
 }
 
@@ -49,5 +65,21 @@ extension LoginViewController: LoginModelToViewProtocol {
             return
         }
         showDefaultAlert(message: "Erro no sistema", completeBlock: nil)
+    }
+    
+    func didRegisterNewCompany(_ did: Bool) {
+        dismissLoader()
+        if did {
+            showDefaultAlert(message: "Sucesso ao cadastrar novo OSC :)", completeBlock: nil)
+            return
+        }
+        showDefaultAlert(message: "Erro ao cadastrar nova OSC :/", completeBlock: nil)
+    }
+}
+
+extension LoginViewController: CompanyViewControllerDelegate {
+    func registerCompany(cnpj: String) {
+        showLoader()
+        viewModel.shouldRegisterNewCompany(cnpj: cnpj)
     }
 }

@@ -17,6 +17,8 @@
 		D77C533B24149D0200417607 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77C533A24149D0200417607 /* Course.storyboard */; };
 		D77C533D2414A73D00417607 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533C2414A73D00417607 /* CourseViewModel.swift */; };
 		D77C533F2414A8A600417607 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533E2414A8A600417607 /* BaseAPI.swift */; };
+		D77C53432414BCF500417607 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C53422414BCF400417607 /* CompanyViewController.swift */; };
+		D77C53452414BD0800417607 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77C53442414BD0800417607 /* Company.storyboard */; };
 		D798440824144482006A3BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440724144482006A3BCD /* AppDelegate.swift */; };
 		D798440A24144482006A3BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440924144482006A3BCD /* SceneDelegate.swift */; };
 		D798441124144484006A3BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D798441024144484006A3BCD /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		D77C533A24149D0200417607 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		D77C533C2414A73D00417607 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		D77C533E2414A8A600417607 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D77C53422414BCF400417607 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		D77C53442414BD0800417607 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		D798440424144482006A3BCD /* Reconecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reconecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798440724144482006A3BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D798440924144482006A3BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 			path = Course;
 			sourceTree = "<group>";
 		};
+		D77C53412414BCDA00417607 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				D77C53422414BCF400417607 /* CompanyViewController.swift */,
+				D77C53442414BD0800417607 /* Company.storyboard */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
 		D79843FB24144482006A3BCD = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +212,7 @@
 				D7215AFB24146C470098BEEE /* Search */,
 				D7215AFA24146C430098BEEE /* Profile */,
 				D77C533724149CC000417607 /* Course */,
+				D77C53412414BCDA00417607 /* Company */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -300,6 +314,7 @@
 			files = (
 				D798442624144918006A3BCD /* Login.storyboard in Resources */,
 				D77C533B24149D0200417607 /* Course.storyboard in Resources */,
+				D77C53452414BD0800417607 /* Company.storyboard in Resources */,
 				D798442924144CD8006A3BCD /* Home.storyboard in Resources */,
 				D798441424144484006A3BCD /* LaunchScreen.storyboard in Resources */,
 				D798441124144484006A3BCD /* Assets.xcassets in Resources */,
@@ -370,6 +385,7 @@
 				D77C533F2414A8A600417607 /* BaseAPI.swift in Sources */,
 				D77C533D2414A73D00417607 /* CourseViewModel.swift in Sources */,
 				D7FAE84224145C2800C8E4AB /* Manager.swift in Sources */,
+				D77C53432414BCF500417607 /* CompanyViewController.swift in Sources */,
 				D798440A24144482006A3BCD /* SceneDelegate.swift in Sources */,
 				D77C53342414857300417607 /* Extensions.swift in Sources */,
 				D798441E24144566006A3BCD /* WelcomeViewController.swift in Sources */,

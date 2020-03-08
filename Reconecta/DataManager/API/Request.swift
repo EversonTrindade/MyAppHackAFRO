@@ -21,7 +21,7 @@ class Request: Requestable {
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = httpMethod
         urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params ?? Data())
-        URLSession.shared.dataTask(with: urlRequest) { data, _, err  in
+        URLSession.shared.dataTask(with: urlRequest) { data, response, err  in
             if let _ = err {
                 error(ServiceError.unknown.message)
                 return

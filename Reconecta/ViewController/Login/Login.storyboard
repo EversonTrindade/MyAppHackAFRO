@@ -53,6 +53,16 @@
                                     <action selector="goToHome:" destination="wia-6K-Jlw" eventType="touchUpInside" id="Igv-oC-MUY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhE-t0-Jtp">
+                                <rect key="frame" x="24" y="802" width="366" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AcO-1V-LgQ"/>
+                                </constraints>
+                                <state key="normal" title="Cadastrar OSC"/>
+                                <connections>
+                                    <action selector="registerNewCompanyAction:" destination="wia-6K-Jlw" eventType="touchUpInside" id="hGL-4o-NUw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -61,11 +71,14 @@
                             <constraint firstItem="Gad-zK-gbB" firstAttribute="top" secondItem="MVj-ad-onb" secondAttribute="bottom" constant="35" id="OeV-Tv-xWi"/>
                             <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="b6Q-xd-ou0" secondAttribute="trailing" constant="134" id="W7P-GT-5bn"/>
                             <constraint firstItem="MVj-ad-onb" firstAttribute="top" secondItem="v1c-sg-8UQ" secondAttribute="bottom" constant="46" id="Wna-Om-FlT"/>
+                            <constraint firstItem="yhE-t0-Jtp" firstAttribute="bottom" secondItem="D7y-vX-NGU" secondAttribute="bottom" id="XGe-IY-VUi"/>
                             <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="v1c-sg-8UQ" secondAttribute="trailing" id="e5h-Nb-qax"/>
                             <constraint firstItem="v1c-sg-8UQ" firstAttribute="leading" secondItem="2O4-6M-11M" secondAttribute="leading" id="f9J-xQ-lsi"/>
                             <constraint firstItem="b6Q-xd-ou0" firstAttribute="top" secondItem="Gad-zK-gbB" secondAttribute="bottom" constant="53" id="fM1-Qe-XUd"/>
                             <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="Gad-zK-gbB" secondAttribute="trailing" constant="44" id="gaZ-3g-OrM"/>
                             <constraint firstItem="MVj-ad-onb" firstAttribute="leading" secondItem="D7y-vX-NGU" secondAttribute="leading" constant="43" id="hfd-xg-wgV"/>
+                            <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="yhE-t0-Jtp" secondAttribute="trailing" constant="24" id="klf-Un-NQ0"/>
+                            <constraint firstItem="yhE-t0-Jtp" firstAttribute="leading" secondItem="D7y-vX-NGU" secondAttribute="leading" constant="24" id="l5g-jH-vdF"/>
                             <constraint firstItem="D7y-vX-NGU" firstAttribute="trailing" secondItem="MVj-ad-onb" secondAttribute="trailing" constant="44" id="wkD-zj-78b"/>
                             <constraint firstItem="v1c-sg-8UQ" firstAttribute="top" secondItem="D7y-vX-NGU" secondAttribute="top" id="y8f-MT-9Aq"/>
                         </constraints>
@@ -73,6 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="eaN-Ua-3bf"/>
                     <connections>
+                        <outlet property="companyButton" destination="yhE-t0-Jtp" id="pwp-hv-jI3"/>
                         <outlet property="passwordTextField" destination="Gad-zK-gbB" id="fSv-Np-pqN"/>
                         <outlet property="userTextField" destination="MVj-ad-onb" id="4q8-d0-F4l"/>
                     </connections>
