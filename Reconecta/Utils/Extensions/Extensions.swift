@@ -19,6 +19,7 @@ extension Array {
 }
 
 enum UserKind: String {
+    case none
     case alumini
     case ong
     case course

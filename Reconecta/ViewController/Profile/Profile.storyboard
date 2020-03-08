@@ -32,14 +32,33 @@
                     <view key="view" contentMode="scaleToFill" id="m2U-7M-Tlm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ad0-FC-oKb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xMa-d2-Dtg" id="g26-XD-p4q"/>
+                                    <outlet property="delegate" destination="xMa-d2-Dtg" id="6iy-db-8rX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ad0-FC-oKb" firstAttribute="top" secondItem="Jex-Ht-ISB" secondAttribute="top" id="IlA-8Q-nPt"/>
+                            <constraint firstItem="Jex-Ht-ISB" firstAttribute="trailing" secondItem="ad0-FC-oKb" secondAttribute="trailing" id="MzG-pV-TK3"/>
+                            <constraint firstItem="Jex-Ht-ISB" firstAttribute="bottom" secondItem="ad0-FC-oKb" secondAttribute="bottom" id="Uw3-k5-g93"/>
+                            <constraint firstItem="ad0-FC-oKb" firstAttribute="leading" secondItem="Jex-Ht-ISB" secondAttribute="leading" id="rSo-Rd-sQn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jex-Ht-ISB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="4ZJ-Lm-uBq"/>
+                    <connections>
+                        <outlet property="tableView" destination="ad0-FC-oKb" id="0sh-Le-UN5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldA-xq-CY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-184" y="77"/>
+            <point key="canvasLocation" x="-119" y="64"/>
         </scene>
     </scenes>
 </document>

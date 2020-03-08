@@ -14,16 +14,20 @@ fileprivate struct identifier {
 
 class WelcomeViewController: UIViewController {
     
+    private var userKind: UserKind = .none
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func aluminiButtonAction(_ sender: Any) {
         goToLogin(userKind: .alumini)
+        userKind = .alumini
     }
     
     @IBAction func ongButtonAction(_ sender: Any) {
         goToLogin(userKind: .ong)
+        userKind = .ong
     }
     
     // MARK: Prepare for segue
@@ -32,7 +36,7 @@ class WelcomeViewController: UIViewController {
             if let tabBarController = segue.destination as? UITabBarController {
                 if let navigationController = tabBarController.viewControllers?.object(index: 0) as? UINavigationController {
                     if let homeViewController = navigationController.viewControllers.object(index: 0) as? HomeViewController {
-                        homeViewController.initView()
+                        homeViewController.initView(kind: userKind)
                     }
                 }
             }

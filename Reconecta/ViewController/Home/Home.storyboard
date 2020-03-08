@@ -32,7 +32,23 @@
                     <view key="view" contentMode="scaleToFill" id="Zu9-7f-pYu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Lr-Jp-ugA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hWt-Lo-9X9" id="93N-iL-leh"/>
+                                    <outlet property="delegate" destination="hWt-Lo-9X9" id="jbc-FN-5AM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Lr-Jp-ugA" firstAttribute="leading" secondItem="5Hj-WT-KI3" secondAttribute="leading" id="D7X-s3-rxF"/>
+                            <constraint firstItem="5Hj-WT-KI3" firstAttribute="trailing" secondItem="0Lr-Jp-ugA" secondAttribute="trailing" id="a3b-eS-C4M"/>
+                            <constraint firstItem="5Hj-WT-KI3" firstAttribute="bottom" secondItem="0Lr-Jp-ugA" secondAttribute="bottom" id="m23-kA-vbR"/>
+                            <constraint firstItem="0Lr-Jp-ugA" firstAttribute="top" secondItem="5Hj-WT-KI3" secondAttribute="top" id="s0b-Wt-nlb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Hj-WT-KI3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="BcY-c8-tu7">
@@ -48,6 +64,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="createNewItemButton" destination="XaK-DG-Zw0" id="Xie-rn-aNp"/>
+                        <outlet property="tableView" destination="0Lr-Jp-ugA" id="Za9-FA-Vhv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS9-Ol-Ktu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

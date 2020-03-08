@@ -14,6 +14,7 @@ class CourseViewController: UIViewController {
     lazy var viewModel: CourseViewToModelProtocol = CourseViewModel(self)
     
     @IBOutlet weak var navigationTitle: UINavigationBar!
+    @IBOutlet weak var numberOfStudents: UITextField!
     @IBOutlet weak var inputInfo: UITextField!
     
     override func viewDidLoad() {
@@ -29,9 +30,14 @@ class CourseViewController: UIViewController {
         switch userKind {
         case .alumini:
             navigationTitle.topItem?.title = "Cadastrar Alumini"
+            inputInfo.placeholder = "CPF"
+            inputInfo.keyboardType = .numberPad
+            numberOfStudents.isHidden = true
             break
         case .course:
             navigationTitle.topItem?.title = "Cadastrar Curso"
+            inputInfo.placeholder = "Nome"
+            inputInfo.keyboardType = .default
             break
         default:
             return
@@ -45,7 +51,7 @@ class CourseViewController: UIViewController {
             viewModel.saveNewAlumini(cpf: inputInfo.text ?? "")
             break
         case .course:
-
+            viewModel.saveNewCourse(name: inputInfo.text ?? "", number: numberOfStudents.text ?? "")
             break
         default:
             return
@@ -58,10 +64,13 @@ class CourseViewController: UIViewController {
 
 extension CourseViewController: CourseModelToViewProtocol {
     func savedNewCourse(_ did: Bool) {
-        
         if did {
+            showDefaultAlert(message: "Curso salvo com sucesso :)") { _ in
+                self.dismiss(animated: true, completion: nil)
+            }
             return
         }
+        showDefaultAlert(message: "Erro ao salvar curso :/", completeBlock: nil)
     }
     
     func savedNewAlumini(_ did: Bool) {

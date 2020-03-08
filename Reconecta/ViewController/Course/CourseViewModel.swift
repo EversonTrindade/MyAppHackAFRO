@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CourseViewToModelProtocol: class {
-    func saveNewCourse()
+    func saveNewCourse(name: String, number: String)
     func saveNewAlumini(cpf: String)
 }
 
@@ -26,13 +26,13 @@ class CourseViewModel: CourseViewToModelProtocol {
         self.delegate = delegate
     }
     
-    func saveNewCourse() {
-//        let params = ["": ""]
-//        Request().request(url: BaseAPI().course, params: params, httpMethod: HTTP.post.method, success: { data in
-//            self.delegate?.savedNewCourse(true)
-//        }) { err in
-//            self.delegate?.savedNewCourse(false)
-//        }
+    func saveNewCourse(name: String, number: String) {
+        let params = ["name": name, "dateCourse": "\(Date())", "numberStudent": number, "companyID": "\(Int.random(in: 0 ... 5))"]
+        Request().request(url: BaseAPI().course, params: params, httpMethod: HTTP.post.method, success: { data in
+            self.delegate?.savedNewCourse(true)
+        }) { err in
+            self.delegate?.savedNewCourse(false)
+        }
     }
     
     func saveNewAlumini(cpf: String) {
