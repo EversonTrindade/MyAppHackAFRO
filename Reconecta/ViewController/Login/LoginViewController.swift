@@ -30,11 +30,19 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var confirmButton: UIButton! {
+        didSet {
+            self.confirmButton.layer.cornerRadius = 26.0
+            self.confirmButton.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var companyButton: UIButton! {
         didSet {
             self.companyButton.isHidden = true
+            self.companyButton.layer.cornerRadius = 26.0
+            self.companyButton.clipsToBounds = true
         }
     }
     

@@ -27,7 +27,7 @@ class CourseViewModel: CourseViewToModelProtocol {
     }
     
     func saveNewCourse(name: String, number: String) {
-        let params = ["name": name, "dateCourse": "\(Date())", "numberStudent": number, "companyID": "\(Int.random(in: 0 ... 5))"]
+        let params = ["name": name, "dateCourse": "\(Date())", "numberStudent": number, "companyID": "1"] as [String : Any]//\(Int.random(in: 0 ... 5)
         Request().request(url: BaseAPI().course, params: params, httpMethod: HTTP.post.method, success: { data in
             self.delegate?.savedNewCourse(true)
         }) { err in
