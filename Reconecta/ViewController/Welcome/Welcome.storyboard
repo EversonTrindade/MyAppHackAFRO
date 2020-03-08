@@ -23,12 +23,10 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFz-fb-LPm">
                                 <rect key="frame" x="112" y="170" width="191" height="85"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="gdN-Z1-Snu"/>
                                     <constraint firstAttribute="width" constant="191" id="xSj-9b-2BB"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SOU ONG"/>
                                 <connections>
                                     <action selector="ongButtonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="aEx-gu-Nby"/>
@@ -36,12 +34,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sm-EE-Vcq">
                                 <rect key="frame" x="112" y="297" width="191" height="85"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="73t-2b-FLE"/>
                                     <constraint firstAttribute="height" constant="85" id="mZ8-6O-yps"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SOU ALUNO"/>
                                 <connections>
                                     <action selector="aluminiButtonAction:" destination="xc0-TD-lqp" eventType="touchUpInside" id="dl8-A5-iXk"/>

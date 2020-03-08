@@ -9,32 +9,28 @@
 import Foundation
 
 class Request: Requestable {
-    func request(url: String, params: [URLQueryItem]?, httpMethod: String, authorization: String?, completion: @escaping (Data?, String?) -> Void) {
-        var urlComponents = URLComponents(string: url)
-        if let params = params {
-            urlComponents?.queryItems = params
-        }
-        guard let url = urlComponents?.url else {
-            completion(nil, ServiceError.unknown.message)
+    func request(url: String, params: [String: Any]?, httpMethod: String,
+                 success: @escaping (_ result: Data?) -> Void, error: @escaping (_ error: String?) -> Void) {
+        
+        guard let urle = URL(string: url) else {
+            error(ServiceError.unknown.message)
             return
         }
-        var urlRequest = URLRequest(url: url)
-        urlRequest.url = url
+        
+        var urlRequest = URLRequest(url: urle)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        if let auth = authorization {
-            urlRequest.addValue(auth, forHTTPHeaderField: "Authorization")
-        }
         urlRequest.httpMethod = httpMethod
-        URLSession.shared.dataTask(with: urlRequest) { data,_, error  in
-            if let _ = error {
-                completion(nil, ServiceError.unknown.message)
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: params ?? Data())
+        URLSession.shared.dataTask(with: urlRequest) { data, _, err  in
+            if let _ = err {
+                error(ServiceError.unknown.message)
                 return
             }
             guard let _ = data else {
-                completion(nil, ServiceError.unknown.message)
+                error(ServiceError.unknown.message)
                 return
             }
-            completion(data, nil)
+            success(data)
         }.resume()
     }
 }

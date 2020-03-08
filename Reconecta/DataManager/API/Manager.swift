@@ -22,5 +22,9 @@ enum HTTP {
 }
 
 protocol Requestable: class {
-    func request(url: String, params: [URLQueryItem]?, httpMethod: String, authorization: String?, completion: @escaping (_ result: Data?,_ error: String?) -> Void)
+    func request(url: String,
+                 params: [String: Any]?,
+                 httpMethod: String,
+                 success: @escaping (_ result: Data?) -> Void,
+                 error: @escaping (_ error: String?) -> Void)
 }

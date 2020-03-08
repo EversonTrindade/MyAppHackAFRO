@@ -30,22 +30,47 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBB-9G-hDF">
+                                <rect key="frame" x="41" y="146" width="333" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ul9-1c-5q6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNC-mn-nPS">
+                                <rect key="frame" x="136" y="245" width="142" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="XGr-sQ-9Nw"/>
+                                </constraints>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="saveInfoAction:" destination="cWU-6a-yEl" eventType="touchUpInside" id="joK-d5-rTr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tAb-tg-3zK" firstAttribute="leading" secondItem="9Os-Vp-ZvH" secondAttribute="leading" symbolic="YES" id="4cM-zu-Eqp"/>
+                            <constraint firstItem="EBB-9G-hDF" firstAttribute="leading" secondItem="TVD-IJ-hDH" secondAttribute="leading" constant="41" id="CiB-iE-iUS"/>
                             <constraint firstItem="TVD-IJ-hDH" firstAttribute="trailing" secondItem="tAb-tg-3zK" secondAttribute="trailing" id="GLu-Db-xKm"/>
+                            <constraint firstItem="lNC-mn-nPS" firstAttribute="leading" secondItem="TVD-IJ-hDH" secondAttribute="leading" constant="136" id="dK4-KR-q6g"/>
                             <constraint firstItem="tAb-tg-3zK" firstAttribute="top" secondItem="TVD-IJ-hDH" secondAttribute="top" id="dhl-FL-lfD"/>
+                            <constraint firstItem="lNC-mn-nPS" firstAttribute="top" secondItem="EBB-9G-hDF" secondAttribute="bottom" constant="65" id="gYs-vG-4ah"/>
+                            <constraint firstItem="TVD-IJ-hDH" firstAttribute="trailing" secondItem="lNC-mn-nPS" secondAttribute="trailing" constant="136" id="qPH-f8-Ybu"/>
+                            <constraint firstItem="EBB-9G-hDF" firstAttribute="top" secondItem="tAb-tg-3zK" secondAttribute="bottom" constant="58" id="saT-aN-w6v"/>
+                            <constraint firstItem="TVD-IJ-hDH" firstAttribute="trailing" secondItem="EBB-9G-hDF" secondAttribute="trailing" constant="40" id="v8K-hS-UpY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TVD-IJ-hDH"/>
                     </view>
                     <connections>
+                        <outlet property="inputInfo" destination="EBB-9G-hDF" id="esw-eM-UTM"/>
                         <outlet property="navigationTitle" destination="tAb-tg-3zK" id="HVy-bu-wlq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWW-De-Uko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="88"/>
+            <point key="canvasLocation" x="0.0" y="87.723214285714278"/>
         </scene>
     </scenes>
 </document>

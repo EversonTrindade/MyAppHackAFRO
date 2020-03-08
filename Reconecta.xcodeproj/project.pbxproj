@@ -15,6 +15,8 @@
 		D77C5336241486FF00417607 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C5335241486FF00417607 /* ProfileViewController.swift */; };
 		D77C533924149CF100417607 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533824149CF100417607 /* CourseViewController.swift */; };
 		D77C533B24149D0200417607 /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77C533A24149D0200417607 /* Course.storyboard */; };
+		D77C533D2414A73D00417607 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533C2414A73D00417607 /* CourseViewModel.swift */; };
+		D77C533F2414A8A600417607 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C533E2414A8A600417607 /* BaseAPI.swift */; };
 		D798440824144482006A3BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440724144482006A3BCD /* AppDelegate.swift */; };
 		D798440A24144482006A3BCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798440924144482006A3BCD /* SceneDelegate.swift */; };
 		D798441124144484006A3BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D798441024144484006A3BCD /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		D77C5335241486FF00417607 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D77C533824149CF100417607 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		D77C533A24149D0200417607 /* Course.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
+		D77C533C2414A73D00417607 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		D77C533E2414A8A600417607 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		D798440424144482006A3BCD /* Reconecta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reconecta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798440724144482006A3BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D798440924144482006A3BCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D77C533824149CF100417607 /* CourseViewController.swift */,
+				D77C533C2414A73D00417607 /* CourseViewModel.swift */,
 				D77C533A24149D0200417607 /* Course.storyboard */,
 			);
 			path = Course;
@@ -211,6 +216,7 @@
 			children = (
 				D7FAE84124145C2800C8E4AB /* Manager.swift */,
 				D7FAE84324145CE800C8E4AB /* Request.swift */,
+				D77C533E2414A8A600417607 /* BaseAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				D7FAE83D24144F9900C8E4AB /* LoginViewModel.swift in Sources */,
 				D77C5336241486FF00417607 /* ProfileViewController.swift in Sources */,
 				D798440824144482006A3BCD /* AppDelegate.swift in Sources */,
+				D77C533F2414A8A600417607 /* BaseAPI.swift in Sources */,
+				D77C533D2414A73D00417607 /* CourseViewModel.swift in Sources */,
 				D7FAE84224145C2800C8E4AB /* Manager.swift in Sources */,
 				D798440A24144482006A3BCD /* SceneDelegate.swift in Sources */,
 				D77C53342414857300417607 /* Extensions.swift in Sources */,
