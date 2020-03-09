@@ -29,6 +29,18 @@ class CourseDetailViewController: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveAction(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Fechar Sala", message: nil, preferredStyle: .actionSheet)
+        let courseOpt = UIAlertAction(title: "Sim", style: .default) { _ in
+
+        }
+        let cancelOpt = UIAlertAction(title: "Cancelar", style: .cancel) { _ in }
+        alert.addAction(courseOpt)
+        alert.addAction(cancelOpt)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension CourseDetailViewController: UITableViewDelegate, UITableViewDataSource {

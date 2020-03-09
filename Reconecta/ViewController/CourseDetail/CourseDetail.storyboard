@@ -29,11 +29,11 @@
                                                 <state key="normal" title="Voltar">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="backAction:" destination="ZqU-FF-hfF" eventType="touchUpInside" id="vwI-ER-2yj"/>
+                                                </connections>
                                             </button>
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <connections>
-                                                <action selector="backAction:" destination="ZqU-FF-hfF" id="VKC-C9-Sjq"/>
-                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="7L5-df-lnt">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v7N-ox-1at">
@@ -42,6 +42,9 @@
                                                 <state key="normal" title="Fechar">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveAction:" destination="ZqU-FF-hfF" eventType="touchUpInside" id="K1A-Qe-xtf"/>
+                                                </connections>
                                             </button>
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </barButtonItem>
